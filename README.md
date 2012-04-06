@@ -89,7 +89,7 @@ a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 14 different C implementations of
+This project contains, so far, 15 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of conditional operators, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
