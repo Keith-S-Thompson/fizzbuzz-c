@@ -82,16 +82,16 @@ it correctly in the unlikely event that maintenance is called for.
 Still, it can be instructive to see how the program might be modified
 to avoid the duplication.
 
-It's easy enough to test whether `i` is a multiple of 3 just once, and
-if so, print `"Fizz"`, and then to test whether it's a multiple of 5,
-and if so, print `"Buzz"`.  But then you have to remember whether you
-printed anything, and print the number itself *only* if you haven't
-printed either `"Fizz"` or `"Buzz"` (and then unconditionally print
-a new-line character).
+It's easy enough to test whether `i` is a multiple of 3 just once,
+and if so, print `"Fizz"`, and then to test whether it's a multiple
+of 5, and if so, print `"Buzz"`.  But then you have to remember
+whether you printed anything, and print the number itself *only*
+if you haven't printed either `"Fizz"` or `"Buzz"` *or both* (and
+then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 17 different C implementations of
+This project contains, so far, 19 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -121,7 +121,7 @@ Please do not use these programs as examples of good programming style.
 * [fizzbuzz09.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz09.c)
   Similar, but using variables to remember whether `i` is a multiple of 3 and/or 5
 * [fizzbuzz10.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz10.c)
-  Build an array of 100 (actually 101) function pointers, then traverse it
+  Build an array of 100 function pointers, then traverse it (does not scale well)
 * [fizzbuzz11.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz11.c)
   Use a function that returns a pointer to the appropriate function
 * [fizzbuzz12.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz12.c)
@@ -138,3 +138,5 @@ Please do not use these programs as examples of good programming style.
   Replace the outer loop by gratuitous use of recursion with divide-and-conquer
 * [fizzbuzz18.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz18.c)
   Twist the logic around a bit and obfuscate
+* [fizzbuzz19.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz19.c)
+  Loop unrolling
