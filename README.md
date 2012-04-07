@@ -43,7 +43,7 @@ Some notes on this solution:
 
 It requires a C compiler that accepts C99, or at least permits
 declarations in for loop headers.  If you don't have such a compiler
-(`gcc -std=c99` works), you change this:
+(`gcc -std=c99` works), you can change this:
 
         for (int i = 1; i <= 100; i ++) {
 
@@ -54,7 +54,8 @@ to this:
 
 It takes advantage of a small piece of mathematics that's not stated
 in the problem, namely that a number is a multiple of both 3 and 5
-if and only if it's a multiple of 15.
+if and only if it's a multiple of 15 -- and of course that you can
+test whether a number is a multiple of some `N` using the `%` operator.
 
 Some important pieces of information are stated twice.  In particular:
 
@@ -75,7 +76,8 @@ of 3 and 7 rather than 3 and 5.
 
 For a problem of this trivial size, *none of these problems are worth
 solving*.  The entire program is only 18 lines, and nobody who knows
-C should have any difficulty understanding what it does.
+C should have any difficulty understanding what it does or modifying
+it correctly in the unlikely event that maintenance is called for.
 
 Still, it can be instructive to see how the program might be modified
 to avoid the duplication.
@@ -91,11 +93,11 @@ And there are a number of other ways to solve the problem.
 
 This project contains, so far, 17 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
-of conditional operators, short-circuit `&&` and `||`, function
+of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
-pointers, gratuitous recursion, and outright deliberate obfuscation.
-And one of them works only if the program's output is redirected to
-a seekable file; it dies with an error message if stdout is sent to
-a terminal.
+pointers, gratuitous recursion, gratuitous divide-and-conquer, and
+outright deliberate obfuscation.  And one of them works only if the
+program's output is redirected to a seekable file; it dies with an
+error message if stdout is sent to a terminal.
 
 Please do not use these programs as examples of good programming style.
