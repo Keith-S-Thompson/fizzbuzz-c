@@ -1,0 +1,22 @@
+#!/bin/sh
+
+ok=1
+failures=''
+for file in fizzbuzz??.c ; do
+    exe=`basename $file .c`
+    out=`basename $file .c`.out
+    gcc -std=c99 $file -o $exe
+    ./$exe >$out
+    errors=`diff $out expected-output.txt | wc -l`
+    if ! cmp -s $out expected-output.txt ; then
+        ok=0
+        failures="$failures $file"
+    fi
+    rm -f $exe $out
+done
+
+if [ $ok = 1 ] ; then
+    echo OK
+else
+    echo Failures: $failures
+fi
