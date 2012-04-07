@@ -89,12 +89,13 @@ a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 15 different C implementations of
+This project contains, so far, 17 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of conditional operators, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
-pointers, and outright deliberate obfuscation.  And one of them
-works only if the program's output is redirected to a seekable file;
-it dies with an error message if stdout is sent to a terminal.
+pointers, gratuitous recursion, and outright deliberate obfuscation.
+And one of them works only if the program's output is redirected to
+a seekable file; it dies with an error message if stdout is sent to
+a terminal.
 
 Please do not use these programs as examples of good programming style.
