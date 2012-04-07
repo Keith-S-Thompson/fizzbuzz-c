@@ -101,3 +101,7 @@ program's output is redirected to a seekable file; it dies with an
 error message if stdout is sent to a terminal.
 
 Please do not use these programs as examples of good programming style.
+
+* [fizzbuzz01.c](fizzbuzz01.c) Straightforward solution
+* [fizzbuzz02.c](fizzbuzz02.c) ...
+* [fizzbuzz03.c](fizzbuzz03.c) ...
