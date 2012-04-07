@@ -136,3 +136,5 @@ Please do not use these programs as examples of good programming style.
   Replace the outer loop by gratuitous use of recursion
 * [fizzbuzz17.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz17.c)
   Replace the outer loop by gratuitous use of recursion with divide-and-conquer
+* [fizzbuzz18.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz18.c)
+  Twist the logic around a bit and obfuscate
