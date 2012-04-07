@@ -91,11 +91,12 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 19 different C implementations of
+This project contains, so far, 20 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
-of the `?:` conditional operator, short-circuit `&&` and `||`, function
-pointers, arrays of function pointers, arrays of arrays of function
-pointers, gratuitous recursion, gratuitous divide-and-conquer, and
+of the `?:` conditional operator, short-circuit `&&` and `||`,
+function pointers, arrays of function pointers, arrays of arrays of
+function pointers, gratuitous recursion, gratuitous divide-and-conquer,
+[Duff's Device](http://en.wikipedia.org/wiki/Duff%27s_device), and
 outright deliberate obfuscation.  And one of them works only if the
 program's output is redirected to a seekable file; it dies with an
 error message if stdout is sent to a terminal.
@@ -140,3 +141,5 @@ Please do not use these programs as examples of good programming style.
   Twist the logic around a bit and obfuscate
 * [fizzbuzz19.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz19.c)
   Loop unrolling
+* [fizzbuzz20.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz20.c)
+  Duff's device (no, really!)
