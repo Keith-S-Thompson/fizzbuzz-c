@@ -91,7 +91,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 22 different C implementations of
+This project contains, so far, 23 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`,
 function pointers, arrays of function pointers, arrays of arrays of
@@ -147,3 +147,5 @@ Please do not use these programs as examples of good programming style.
   Duff's device and an array of pointers to format strings
 * [fizzbuzz22.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz22.c)
   Use an array of 15 function pointers
+* [fizzbuzz23.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz23.c)
+  Use a two-dimensional array of characters
