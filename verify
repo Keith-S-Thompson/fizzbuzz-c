@@ -20,6 +20,7 @@ fi
 ok=1
 failures=''
 for file in fizzbuzz??.c ; do
+    echo -n .
     exe=`basename $file .c`
     out=`basename $file .c`.out
     gcc $gcc_args $file -o $exe
@@ -31,6 +32,7 @@ for file in fizzbuzz??.c ; do
     fi
     rm -f $exe $out
 done
+echo ''
 
 if [ $ok = 1 ] ; then
     echo OK
