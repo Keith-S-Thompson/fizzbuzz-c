@@ -155,3 +155,5 @@ Please do not use these programs as examples of good programming style.
   Use printf's "%n" conversion specifier and a little tricky logic
 * [fizzbuzz26.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz26.c)
   Manipulate the tens and units digits separately
+* [fizzbuzz27.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz27.c)
+  Gratuitous use of pthreads
