@@ -23,7 +23,11 @@ for file in fizzbuzz??.c ; do
     echo -n .
     exe=`basename $file .c`
     out=`basename $file .c`.out
-    gcc $gcc_args $file -o $exe
+    if [ "$file" = "fizzbuzz27.c" ] ; then
+        gcc $gcc_args -pthread $file -o $exe
+    else
+        gcc $gcc_args $file -o $exe
+    fi
     ./$exe >$out
     errors=`diff $out expected-output.txt | wc -l`
     if ! cmp -s $out expected-output.txt ; then
