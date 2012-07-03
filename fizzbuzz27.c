@@ -3,31 +3,45 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 void die(char *message) {
     fprintf(stderr, "%s\n",  message);
     exit(EXIT_FAILURE);
 }
 
+struct dstring {
+    char *str;
+    bool allocated;
+};
+
 void *thread_routine(void *arg) {
     const int i = *(int*)arg;
+    struct dstring *result = malloc(sizeof *result);
+    if (result == NULL) {
+        die("malloc failed");
+    }
     if (i % 15 == 0) {
-        return "FizzBuzz";
+        *result = (struct dstring){ .str = "FizzBuzz",  .allocated = false };
     }
     else if (i % 3 == 0) {
-        return "Fizz";
+        *result = (struct dstring){ .str = "Fizz",  .allocated = false };
     }
     else if (i % 5 == 0) {
-        return "Buzz";
+        *result = (struct dstring){ .str = "Buzz",  .allocated = false };
     }
     else {
-        static char result[4];
-        sprintf(result, "%d", i);
-        return result;
+        char *str = malloc(4);
+        if (str == NULL) {
+            die("malloc failed");
+        }
+        sprintf(str, "%d", i);
+        *result = (struct dstring){ .str = str, .allocated = true };
     }
+    return result;
 }
 
-char *line(int i) {
+struct dstring *line(int i) {
     pthread_t thr;
     int result = pthread_create(&thr, NULL, thread_routine, &i);
     if (result != 0) {
@@ -43,7 +57,12 @@ char *line(int i) {
 
 int main(void) {
     for (int i = 1; i <= 100; i ++) {
-        puts(line(i));
+        struct dstring *dline = line(i);
+        puts(dline->str);
+        if (dline->allocated) {
+            free(dline->str);
+        }
+        free(dline);
     }
 
     return 0;
