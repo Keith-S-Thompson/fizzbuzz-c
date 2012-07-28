@@ -157,3 +157,7 @@ Please do not use these programs as examples of good programming style.
   Manipulate the tens and units digits separately
 * [fizzbuzz27.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz27.c)
   Gratuitous use of pthreads
+* [fizzbuzz28.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz28.c)
+  Another tricky way to determine what to print
+* [fizzbuzz29.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz29.c)
+  Based on fizzbuzz29, but taking advantage of the fact that excess arguments to printf are ignored.
