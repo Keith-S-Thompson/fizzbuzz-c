@@ -162,4 +162,6 @@ Please do not use these programs as examples of good programming style.
 * [fizzbuzz29.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz29.c)
   Based on fizzbuzz29, but taking advantage of the fact that excess arguments to printf are ignored.
 * [fizzbuzz30.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz30.c)
-  Based on fizzbuzz30, but more terse, using a compound literal.
+  Based on fizzbuzz30, but more terse, using a compound literal
+* [fizzbuzz31.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz31.c)
+  More abuse of operators
