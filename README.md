@@ -91,7 +91,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 30 different C implementations of
+This project contains, so far, 32 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`,
 function pointers, arrays of function pointers, arrays of arrays of
