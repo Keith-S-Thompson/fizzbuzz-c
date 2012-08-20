@@ -165,3 +165,5 @@ Please do not use these programs as examples of good programming style.
   Based on fizzbuzz30, but more terse, using a compound literal
 * [fizzbuzz31.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz31.c)
   More abuse of operators
+* [fizzbuzz32.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz32.c)
+  Use a fixed-size one-dimensional char array
