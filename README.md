@@ -167,3 +167,5 @@ Please do not use these programs as examples of good programming style.
   More abuse of operators
 * [fizzbuzz32.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz32.c)
   Use a fixed-size one-dimensional char array
+* [fizzbuzz33.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz33.c)
+  Track i%3 and i%5 in separate variables without using division
