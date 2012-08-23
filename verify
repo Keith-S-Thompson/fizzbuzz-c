@@ -1,10 +1,13 @@
 #!/bin/sh
 
 strict=0
+tests=""
 
 for arg in "$@" ; do
     if [ "$arg" = "-strict" ] ; then
         strict=1
+    elif [ -f "$arg" ] ; then
+        tests="$tests $arg"
     else
         echo "Usage: $0 [-strict]" 1>&2
         exit 1
@@ -17,9 +20,13 @@ else
     gcc_args="-std=c99"
 fi
 
+if [ ! "$tests" ] ; then
+    tests=fizzbuzz??.c
+fi
+
 ok=1
 failures=''
-for file in fizzbuzz??.c ; do
+for file in $tests ; do
     echo -n .
     exe=`basename $file .c`
     out=`basename $file .c`.out
