@@ -169,3 +169,7 @@ Please do not use these programs as examples of good programming style.
   Use a fixed-size one-dimensional char array
 * [fizzbuzz33.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz33.c)
   Track i%3 and i%5 in separate variables without using division
+* [fizzbuzz34.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz34.c)
+  Use a wrapper function to perform the loop
+* [fizzbuzz35.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz35.c)
+  Like fizzbuzz34, but recursive
