@@ -173,3 +173,5 @@ Please do not use these programs as examples of good programming style.
   Use a wrapper function to perform the loop
 * [fizzbuzz35.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz35.c)
   Like fizzbuzz34, but recursive
+* [fizzbuzz36.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz36.c)
+  Another brute-force approach, similar to fizzbuzz04.c but using a lookup table.
