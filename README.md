@@ -174,4 +174,6 @@ Please do not use these programs as examples of good programming style.
 * [fizzbuzz35.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz35.c)
   Like fizzbuzz34, but recursive
 * [fizzbuzz36.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz36.c)
-  Another brute-force approach, similar to fizzbuzz04.c but using a lookup table.
+  Another brute-force approach, similar to fizzbuzz04.c but using a lookup table
+* [fizzbuzz37.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz37.c)
+  A variant of fizzbuzz36.c, encoding the lookup table in white space
