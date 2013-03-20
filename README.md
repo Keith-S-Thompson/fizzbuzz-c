@@ -91,7 +91,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 32 different C implementations of
+This project contains, so far, 38 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`,
 function pointers, arrays of function pointers, arrays of arrays of
@@ -177,3 +177,5 @@ Please do not use these programs as examples of good programming style.
   Another brute-force approach, similar to fizzbuzz04.c but using a lookup table
 * [fizzbuzz37.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz37.c)
   A variant of fizzbuzz36.c, encoding the lookup table in white space
+* [fizzbuzz38.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz38.c)
+  A compressed variant of fizzbuzz19.c
