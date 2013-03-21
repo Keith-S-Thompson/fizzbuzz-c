@@ -50,7 +50,7 @@ struct dstring *line(int i) {
     void *retval;
     result = pthread_join(thr, &retval);
     if (result != 0) {
-        die("Error in pthread_create");
+        die("Error in pthread_join");
     }
     return retval;
 }
