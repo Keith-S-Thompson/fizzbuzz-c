@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 40 different C implementations of
+This project contains, so far, 41 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`,
 function pointers, arrays of function pointers, arrays of arrays of
@@ -182,3 +182,5 @@ Please do not use these programs as examples of good programming style.
   Call main() recursively
 * [fizzbuzz40.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz40.c)
   Call main() recursively with a single argument string representing the range
+* [fizzbuzz41.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz41.c)
+  Control the output via the printf format string
