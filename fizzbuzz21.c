@@ -27,6 +27,5 @@ int main(void) {
         case 10:      printf(format[i%15], i); i++;
                  } while(i < 100);
     }
-    return 0;
 }
 

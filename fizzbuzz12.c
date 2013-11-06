@@ -29,5 +29,4 @@ int main(void) {
         second(i)(i);
         putchar('\n');
     }
-    return 0;
 }

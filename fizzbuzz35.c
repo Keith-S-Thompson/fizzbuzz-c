@@ -18,5 +18,4 @@ void recurse(int first, int last, void (*func)(int)) {
 
 int main(void) {
     recurse(1, 100, line);
-    return 0;
 }

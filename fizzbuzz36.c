@@ -12,5 +12,4 @@ int main(void) {
             case 'F': puts("FizzBuzz");  break;
         }
     }
-    return 0;
 }

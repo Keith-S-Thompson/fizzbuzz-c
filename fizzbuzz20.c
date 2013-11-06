@@ -19,5 +19,4 @@ int main(void) {
         case 10:      puts("Buzz");     i++;
                  } while(i < 100);
     }
-    return 0;
 }

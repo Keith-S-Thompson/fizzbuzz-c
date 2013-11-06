@@ -14,5 +14,4 @@ int main(void) {
         if (funcs[i] == NULL) funcs[i] = print;
     }
     for (int i = 1; i <= 100; i ++) funcs[i%15](i);
-    return 0;
 }

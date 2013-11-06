@@ -19,5 +19,4 @@ int main(void) {
             case 3*'\t'    : puts("FizzBuzz");  break;
         }
     }
-    return 0;
 }

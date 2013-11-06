@@ -17,5 +17,4 @@ void loop(int first, int last, void (*func)(int)) {
 
 int main(void) {
     loop(1, 100, line);
-    return 0;
 }

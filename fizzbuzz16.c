@@ -12,5 +12,4 @@ void fizzbuzz(int i) {
 
 int main(void) {
     fizzbuzz(100);
-    return 0;
 }

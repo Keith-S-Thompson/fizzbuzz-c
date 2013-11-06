@@ -7,5 +7,4 @@ int main(void) {
         printf("%d\nFizz\n%d\n%d\nFizzBuzz\n",
                i+10, i+12, i+13);
     }
-    return 0;
 }

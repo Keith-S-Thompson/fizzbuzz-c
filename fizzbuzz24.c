@@ -16,5 +16,4 @@ int main(void) {
         }
         puts(line);
     }
-    return 0;
 }

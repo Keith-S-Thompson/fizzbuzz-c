@@ -5,5 +5,4 @@ int main(void) {
         const int x = !(i%3) + (!(i%5)<<1);
         s[x] ? puts(s[x]) : printf("%d\n", i);
     }
-    return 0;
 }

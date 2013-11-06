@@ -14,5 +14,4 @@ int main(void) {
         printf("%d\n%d\n", i+12, i+13);
         puts("FizzBuzz");
     }
-    return 0;
 }

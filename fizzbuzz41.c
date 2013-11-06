@@ -10,5 +10,4 @@ int main(void) {
         printf("%.*s", 3*5*!(three+five), s);
         putchar('\n');
     }
-    return 0;
 }

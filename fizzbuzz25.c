@@ -9,5 +9,4 @@ int main(void) {
         n   || printf("%d", i);
         putchar('\n');
     }
-    return 0;
 }

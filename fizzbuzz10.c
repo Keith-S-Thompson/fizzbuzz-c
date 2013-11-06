@@ -16,6 +16,4 @@ int main(void) {
     }
 
     for (int i = 1; i <= 100; i ++) funcs[i-1](i);
-
-    return 0;
 }

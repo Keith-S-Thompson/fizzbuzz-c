@@ -64,6 +64,4 @@ int main(void) {
         }
         free(dline);
     }
-
-    return 0;
 }

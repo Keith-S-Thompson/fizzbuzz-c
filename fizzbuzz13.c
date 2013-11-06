@@ -12,5 +12,4 @@ int main(void) {
         arr[!(i%3)+(!(i%5)<<1)](i);
         putchar('\n');
     }
-    return 0;
 }

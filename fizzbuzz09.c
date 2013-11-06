@@ -5,5 +5,4 @@ int main(void) {
         int m5 = !(i%5);
         !(m3|m5)?printf("%d\n",i):puts(m3&m5?"FizzBuzz":m3?"Fizz":"Buzz");
     }
-    return 0;
 }

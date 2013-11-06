@@ -9,5 +9,4 @@ int main(void) {
          "79\nBuzz\nFizz\n82\n83\nFizz\nBuzz\n86\nFizz\n88\n89\nFizzBuzz\n91\n"
          "92\nFizz\n94\nBuzz\nFizz\n97\n98\nFizz\nBuzz"
     );
-    return 0;
 }

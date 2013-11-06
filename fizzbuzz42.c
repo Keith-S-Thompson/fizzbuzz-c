@@ -5,5 +5,4 @@ int main(void) {
                       i%3 ? "" : "Fizz",
                       i%5 ? "" : "Buzz") ? "\n" : "%d\n", i);
     }
-    return 0;
 }

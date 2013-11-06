@@ -6,5 +6,4 @@ int main(void) {
         !(i%5)  && puts("Buzz") ||
         printf("%d\n", i);
     }
-    return 0;
 }

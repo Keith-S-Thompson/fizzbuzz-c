@@ -16,5 +16,4 @@ int main(void) {
     for (int i = 0; i < 900; i += 9) {
         puts(output + i);
     }
-    return 0;
 }

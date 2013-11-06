@@ -18,5 +18,4 @@ int main(void) {
     for (int i = 1; i <= 100; i ++) {
         puts(line[i-1]);
     }
-    return 0;
 }

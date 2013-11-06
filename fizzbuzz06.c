@@ -13,5 +13,4 @@ int main(void) {
                output[1][m5],
                output[2][!m3&!m5]);
     }
-    return 0;
 }

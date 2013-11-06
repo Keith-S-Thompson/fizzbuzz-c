@@ -4,5 +4,4 @@ int main(void) {
         i % 3 && i % 5 ? printf("%d\n", i) :
         puts(!(i % 15) ? "FizzBuzz" : !(i % 3) ? "Fizz" : "Buzz");
     }
-    return 0;
 }
