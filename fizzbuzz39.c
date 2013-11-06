@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
             else if (lo % 5  == 0) puts("Buzz");
             else                   printf("%d\n", lo);
             if (lo < hi) {
-                char arg1[3];
+                char arg1[4];
                 sprintf(arg1, "%d", lo+1);
                 return main(3, (char*[]){argv[0], arg1, argv[2]});
             }
