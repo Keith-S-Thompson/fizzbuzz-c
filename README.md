@@ -92,15 +92,18 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 42 different C implementations of
+This project contains, so far, 43 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
-of the `?:` conditional operator, short-circuit `&&` and `||`,
-function pointers, arrays of function pointers, arrays of arrays of
-function pointers, gratuitous recursion, gratuitous divide-and-conquer,
-[Duff's Device](http://en.wikipedia.org/wiki/Duff%27s_device), and
-outright deliberate obfuscation.  And one of them works only if the
-program's output is redirected to a seekable file; it dies with an
-error message if stdout is sent to a terminal.
+of the `?:` conditional operator, short-circuit `&&` and `||`, function
+pointers, arrays of function pointers, arrays of arrays of function
+pointers, gratuitous recursion, gratuitous divide-and-conquer, [Duff's
+Device](http://en.wikipedia.org/wiki/Duff%27s_device), and outright
+deliberate obfuscation.  One of them works only if the program's output
+is redirected to a seekable file; it dies with an error message if
+stdout is sent to a terminal.  Another works only on implementations
+that support [Pthreads](http://en.wikipedia.org/wiki/Pthreads).
+(The 2011 ISO C standard adds standard threads as an optional feature;
+I haven't yet written a version that takes advantage of that.)
 
 Please do not use these programs as examples of good programming style.
 
@@ -186,3 +189,5 @@ Please do not use these programs as examples of good programming style.
   Control the output via the printf format string
 * [fizzbuzz42.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz42.c)
   Use the result of an inner printf to control an outer printf; abuse of conditional operator
+* [fizzbuzz43.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz43.c)
+  Print 15 lines at a time, modifying the format string for the final iteration
