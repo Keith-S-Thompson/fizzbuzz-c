@@ -4,8 +4,8 @@ really can't.
 
 References:
 
-* [http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/](Using FizzBuzz to Find Developers who Grok Coding) by Imran Ghory
-* [http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html](Why Can't Programmers.. Program?) by Jeff Atwood
+* [Using FizzBuzz to Find Developers who Grok Coding](http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/) by Imran Ghory
+* [Why Can't Programmers.. Program?](http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html) by Jeff Atwood
 
 The requirements are simple:
 
