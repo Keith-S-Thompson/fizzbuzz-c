@@ -191,3 +191,7 @@ Please do not use these programs as examples of good programming style.
   Use the result of an inner printf to control an outer printf; abuse of conditional operator
 * [fizzbuzz43.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz43.c)
   Print 15 lines at a time, modifying the format string for the final iteration
+* [fizzbuzz44.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz44.c)
+  Ugly games with printf format string
+* [fizzbuzz45.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz45.c)
+  Even uglier games with printf format string
