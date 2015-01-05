@@ -2,7 +2,7 @@
 #include <string.h>
 int main(void) {
     for (int i = 1; i <= 100; i ++) {
-        char format[11];
+        char format[12];
         sprintf(format,
                 "%%%ss%%%ss%s\n",
                 i%3?".0":"",
