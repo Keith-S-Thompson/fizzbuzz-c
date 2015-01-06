@@ -1,51 +1,60 @@
 #!/bin/sh
 
-strict=0
+strict=false
 tests=""
+clang=false
 
 for arg in "$@" ; do
     if [ "$arg" = "-strict" ] ; then
-        strict=1
+        strict=true
+    elif [ "$arg" = "-clang" ] ; then
+        clang=true
     elif [ -f "$arg" ] ; then
         tests="$tests $arg"
     else
-        echo "Usage: $0 [-strict]" 1>&2
+        echo "Usage: $0 [-strict] [-clang]" 1>&2
         exit 1
     fi
 done
 
-if [ $strict = 1 ] ; then
-    gcc_args="-std=c99 -pedantic -Wall -Wextra -O3"
+if $clang ; then
+    CC=clang
 else
-    gcc_args="-std=c99"
+    CC=gcc
+fi
+
+if $strict ; then
+    CFLAGS="-std=c99 -pedantic -Wall -Wextra -O3"
+else
+    CFLAGS="-std=c99"
 fi
 
 if [ ! "$tests" ] ; then
     tests=fizzbuzz??.c
 fi
 
-ok=1
+ok=true
 failures=''
 for file in $tests ; do
     echo -n .
     exe=`basename $file .c`
     out=`basename $file .c`.out
     if [ "$file" = "fizzbuzz27.c" ] ; then
-        gcc $gcc_args -pthread $file -o $exe
+        $CC $CFLAGS -pthread $file -o $exe
     else
-        gcc $gcc_args $file -o $exe
+        $CC $CFLAGS          $file -o $exe
     fi
     ./$exe >$out
     errors=`diff $out expected-output.txt | wc -l`
     if ! cmp -s $out expected-output.txt ; then
-        ok=0
+        ok=false
         failures="$failures $file"
     fi
     rm -f $exe $out
 done
 echo ''
 
-if [ $ok = 1 ] ; then
+if $ok ; then
     echo OK
 else
     echo Failures: $failures
