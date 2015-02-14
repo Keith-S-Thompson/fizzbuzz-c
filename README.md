@@ -217,3 +217,5 @@ Please do not use these programs as examples of good programming style.
   Finite state machine
 * [fizzbuzz56.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz56.c)
   Finite state machine, done the old fashioned way
+* [fizzbuzz57.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz57.c)
+  Finite state machine, now even more obfuscated
