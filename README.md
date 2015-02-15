@@ -14,11 +14,11 @@ The requirements are simple:
 > five print "Buzz". For numbers which are multiples of both three and
 > five print "FizzBuzz".
 
-Here's a straightforward implementation in C, similar to one I wrote
-(on paper!) in a recent job interview of my own.  (The problem
-statement didn't explictly say what to print for numbers that are
-multiples of both three and five, so I stated the assumption explicitly
-as part of my solution.)
+Here's a straightforward implementation in C, similar to one I
+wrote (on paper!) in a job interview of my own a few years ago.
+(The problem statement didn't explictly say what to print for numbers
+that are multiples of both three and five, so I stated the assumption
+explicitly as part of my solution.)
 
     #include <stdio.h>
     int main(void) {
@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 56 different C implementations of
+This project contains, so far, 59 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -219,3 +219,7 @@ Please do not use these programs as examples of good programming style.
   Finite state machine, done the old fashioned way
 * [fizzbuzz57.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz57.c)
   Finite state machine, now even more obfuscated
+* [fizzbuzz58.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz58.c)
+  Linked list of format structures
+* [fizzbuzz59.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz59.c)
+  fizzbuzz59.c was too legible

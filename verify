@@ -24,9 +24,12 @@ else
 fi
 
 if $strict ; then
-    CFLAGS="-std=c99 -pedantic -Wall -Wextra -O3 -Wno-format-extra-args -Wno-logical-op-parentheses"
+    CFLAGS="-std=c99 -pedantic -Wall -Wextra -O3 -Wno-format-extra-args"
 else
-    CFLAGS="-std=c99 -Wno-format-extra-args -Wno-logical-op-parentheses"
+    CFLAGS="-std=c99 -Wno-format-extra-args"
+fi
+if $clang ; then
+    CFLAGS="$CFLAGS -Wno-logical-op-parentheses"
 fi
 
 if [ ! "$tests" ] ; then
