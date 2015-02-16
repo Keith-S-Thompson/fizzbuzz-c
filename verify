@@ -24,13 +24,15 @@ else
 fi
 
 if $strict ; then
-    CFLAGS="-std=c99 -pedantic -Wall -Wextra -O3 -Wno-format-extra-args"
+    CFLAGS="-std=c99 -pedantic -Wall -Wextra -O3"
 else
     CFLAGS="-std=c99 -Wno-format-extra-args"
 fi
-if $clang ; then
+if $clang && ! $strict ; then
     CFLAGS="$CFLAGS -Wno-logical-op-parentheses"
 fi
+
+echo ">>> $CC $CFLAGS"
 
 if [ ! "$tests" ] ; then
     tests=fizzbuzz??.c
