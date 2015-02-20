@@ -32,8 +32,6 @@ if $clang && ! $strict ; then
     CFLAGS="$CFLAGS -Wno-logical-op-parentheses"
 fi
 
-echo ">>> $CC $CFLAGS"
-
 if [ ! "$tests" ] ; then
     tests=fizzbuzz??.c
 fi
