@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 60 different C implementations of
+This project contains, so far, 61 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -224,4 +224,6 @@ Please do not use these programs as examples of good programming style.
 * [fizzbuzz59.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz59.c)
   fizzbuzz58.c was too legible
 * [fizzbuzz60.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz60.c)
-  Like fizzbuzz59.c, but telative offsets avoid the need for a pointer to the first element
+  Like fizzbuzz59.c, but relative offsets avoid the need for a pointer to the first element
+* [fizzbuzz61.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz61.c)
+  Scramble and unscramble
