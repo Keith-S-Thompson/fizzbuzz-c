@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-void sort(char *s, int *index, int count) {
+void sort(char *s, short *index, int count) {
     for (int i = 0; i < count-18; i ++) {
         for (int j = 0; j < count-1; j ++) {
             if (index[j] > index[j+1]) {
-                const int tmpi = index[j];
+                const short tmpi = index[j];
                 const char tmpc = s[j];
                 index[j] = index[j+1];
                 s[j] = s[j+1];
@@ -16,12 +16,12 @@ void sort(char *s, int *index, int count) {
 }
 
 int main(void) {
-    const struct { char c; int n; } seq[] = {
+    const struct { char c; short n; } seq[] = {
         '\n', 100, '1', 13, '2', 12, '3', 11, '4', 13, '5', 5, '6',
         11, '7', 13, '8', 12, '9', 11, 'B', 20, 'F', 33, 'i', 33,
         'u', 20, 'z', 106,
     };
-    int index[] = {
+    short index[] = {
         49, 20, 181, 42, 279, 205, 103, 192, 141, 145, 195, 163, 215,
         297, 188, 270, 160, 276, 320, 233, 14, 178, 323, 167, 113,
         272, 127, 341, 52, 18, 10, 202, 72, 93, 130, 239, 124, 30,
