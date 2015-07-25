@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 62 different C implementations of
+This project contains, so far, 63 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -229,3 +229,5 @@ Please do not use these programs as examples of good programming style.
   Scramble and unscramble
 * [fizzbuzz62.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz62.c)
   Relatively straightforward use of ?: operator
+* [fizzbuzz63.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz63.c)
+  This one works only if identical string literals occupy the same storage
