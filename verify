@@ -28,9 +28,9 @@ if $strict ; then
 else
     CFLAGS="-std=c99 -Wno-format-extra-args"
 fi
-if $clang && ! $strict ; then
-    CFLAGS="$CFLAGS -Wno-logical-op-parentheses"
-fi
+# if $clang && ! $strict ; then
+#     CFLAGS="$CFLAGS -Wno-logical-op-parentheses"
+# fi
 
 if [ ! "$tests" ] ; then
     tests=fizzbuzz??.c
@@ -44,6 +44,8 @@ for file in $tests ; do
     out=`basename $file .c`.out
     if [ "$file" = "fizzbuzz27.c" ] ; then
         $CC $CFLAGS -pthread $file -o $exe
+    elif [ "$file" = "fizzbuzz64.c" ] ; then
+        $CC $CFLAGS -Wno-multichar $file -o $exe
     else
         $CC $CFLAGS          $file -o $exe
     fi
