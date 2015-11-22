@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 65 different C implementations of
+This project contains, so far, 66 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -235,3 +235,5 @@ Please do not use these programs as examples of good programming style.
   Abuse of multi-character constants (works only if they have distinct values, which is not guaranteed)
 * [fizzbuzz65.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz65.c)
   You can write BASIC in any language
+* [fizzbuzz66.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz66.c)
+  A few macros can make the code much clearer
