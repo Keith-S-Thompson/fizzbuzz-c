@@ -1,9 +1,9 @@
 #define _POSIX_C_SOURCE 199309L
 
-#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
+#include <pthread.h>
+#include <sched.h>
 
 static int lines_printed = 0;
 static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -31,8 +31,7 @@ static void *thread_routine(void *arg) {
         else {
             try(pthread_mutex_unlock(&mutex));
         }
-        enum { MILLISECOND = 1000000 };
-        nanosleep(&(struct timespec){.tv_sec = 0, .tv_nsec = MILLISECOND}, NULL);
+        sched_yield();
     }
 }
 
