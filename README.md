@@ -244,4 +244,4 @@ Please do not use these programs as examples of good programming style.
 * [fizzbuzz69.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz69.c)
   Cheat.  Fails if `expected-output.txt` is not available.
 * [fizzbuzz70.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz70.c)
-  Based on fizzbuzz20.c, using Duff's Device.  Use printf for all lines, and shuffle the labels.
+  Based on fizzbuzz20.c, using Duff's Device.  Use printf for all lines, and shuffle the case labels.

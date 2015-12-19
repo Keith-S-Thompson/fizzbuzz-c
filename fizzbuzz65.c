@@ -9,7 +9,7 @@ _60:  printf("%d\n", i);
 _70:  goto _130;
 _80:  puts("Fizz");
 _90:  goto _130;
-_100:  puts("Buzz");
+_100: puts("Buzz");
 _110: goto _130;
 _120: puts("FizzBuzz");
 _130: i = i + 1;
