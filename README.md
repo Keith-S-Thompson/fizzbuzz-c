@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 71 different C implementations of
+This project contains, so far, 72 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -108,142 +108,144 @@ I haven't yet written a version that takes advantage of that.)
 Please do not use these programs as examples of good programming style.
 
 * [fizzbuzz01.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz01.c)
-  Straightforward solution
+  Straightforward solution.
 * [fizzbuzz02.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz02.c)
-  Don't Repeat Yourself, remember whether we printed anything
+  Don't Repeat Yourself, remember whether we printed anything.
 * [fizzbuzz03.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz03.c)
   Similar to fizzbuzz02, but uses `ftell()` to detect whether anything was printed.  This version fails if stdout is not seekable.
 * [fizzbuzz04.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz04.c)
-  Brute force
+  Brute force.
 * [fizzbuzz05.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz05.c)
-  Use the value returned by `printf` to detect whether anything was printed
+  Use the value returned by `printf` to detect whether anything was printed.
 * [fizzbuzz06.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz06.c)
-  Index into a two-dimensional array of pointers to strings
+  Index into a two-dimensional array of pointers to strings.
 * [fizzbuzz07.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz07.c)
-  Reduce the body of the loop to a single convoluted expression statement using short-circuit `&&` and `||`
+  Reduce the body of the loop to a single convoluted expression statement using short-circuit `&&` and `||`.
 * [fizzbuzz08.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz08.c)
-  Abuse of the `?:` conditional operator
+  Abuse of the `?:` conditional operator.
 * [fizzbuzz09.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz09.c)
-  Similar, but using variables to remember whether `i` is a multiple of 3 and/or 5
+  Similar, but using variables to remember whether `i` is a multiple of 3 and/or 5.
 * [fizzbuzz10.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz10.c)
-  Build an array of 100 function pointers, then traverse it (does not scale well)
+  Build an array of 100 function pointers, then traverse it (does not scale well).
 * [fizzbuzz11.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz11.c)
-  Use a function that returns a pointer to the appropriate function
+  Use a function that returns a pointer to the appropriate function.
 * [fizzbuzz12.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz12.c)
-  Similar, but use two functions returning function pointers
+  Similar, but use two functions returning function pointers.
 * [fizzbuzz13.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz13.c)
-  Another array of function pointers, but only 4 this time, indexed by a number computed from i
+  Another array of function pointers, but only 4 this time, indexed by a number computed from i.
 * [fizzbuzz14.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz14.c)
-  Similar to fizzbuzz05, but adding abuse of short-circuit `||`
+  Similar to fizzbuzz05, but adding abuse of short-circuit `||`.
 * [fizzbuzz15.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz15.c)
-  Use a `switch` statement
+  Use a `switch` statement.
 * [fizzbuzz16.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz16.c)
-  Replace the outer loop by gratuitous use of recursion
+  Replace the outer loop by gratuitous use of recursion.
 * [fizzbuzz17.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz17.c)
-  Replace the outer loop by gratuitous use of recursion with divide-and-conquer
+  Replace the outer loop by gratuitous use of recursion with divide-and-conquer.
 * [fizzbuzz18.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz18.c)
-  Twist the logic around a bit and obfuscate
+  Twist the logic around a bit and obfuscate.
 * [fizzbuzz19.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz19.c)
-  Loop unrolling
+  Loop unrolling.
 * [fizzbuzz20.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz20.c)
-  Duff's device (no, really!)
+  Duff's device (no, really!).
 * [fizzbuzz21.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz21.c)
-  Duff's device and an array of pointers to format strings
+  Duff's device and an array of pointers to format strings.
 * [fizzbuzz22.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz22.c)
-  Use an array of 15 function pointers
+  Use an array of 15 function pointers.
 * [fizzbuzz23.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz23.c)
-  Use a two-dimensional array of characters
+  Use a two-dimensional array of characters.
 * [fizzbuzz24.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz24.c)
-  Simple string processing
+  Simple string processing.
 * [fizzbuzz25.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz25.c)
-  Use printf's "%n" conversion specifier and a little tricky logic
+  Use printf's "%n" conversion specifier and a little tricky logic.
 * [fizzbuzz26.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz26.c)
-  Manipulate the tens and units digits separately
+  Manipulate the tens and units digits separately.
 * [fizzbuzz27.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz27.c)
-  Gratuitous use of pthreads
+  Gratuitous use of pthreads.
 * [fizzbuzz28.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz28.c)
-  Another tricky way to determine what to print
+  Another tricky way to determine what to print.
 * [fizzbuzz29.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz29.c)
   Based on fizzbuzz29, but taking advantage of the fact that excess arguments to printf are ignored.
 * [fizzbuzz30.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz30.c)
-  Based on fizzbuzz30, but more terse, using a compound literal
+  Based on fizzbuzz30, but more terse, using a compound literal.
 * [fizzbuzz31.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz31.c)
-  More abuse of operators
+  More abuse of operators.
 * [fizzbuzz32.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz32.c)
-  Use a fixed-size one-dimensional char array
+  Use a fixed-size one-dimensional char array.
 * [fizzbuzz33.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz33.c)
-  Track i%3 and i%5 in separate variables without using division
+  Track i%3 and i%5 in separate variables without using division.
 * [fizzbuzz34.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz34.c)
-  Use a wrapper function to perform the loop
+  Use a wrapper function to perform the loop.
 * [fizzbuzz35.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz35.c)
-  Like fizzbuzz34, but recursive
+  Like fizzbuzz34, but recursive.
 * [fizzbuzz36.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz36.c)
-  Another brute-force approach, similar to fizzbuzz04.c but using a lookup table
+  Another brute-force approach, similar to fizzbuzz04.c but using a lookup table.
 * [fizzbuzz37.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz37.c)
-  A variant of fizzbuzz36.c, encoding the lookup table in white space
+  A variant of fizzbuzz36.c, encoding the lookup table in white space.
 * [fizzbuzz39.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz39.c)
-  Call main() recursively
+  Call main() recursively.
 * [fizzbuzz40.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz40.c)
-  Call main() recursively with a single argument string representing the range
+  Call main() recursively with a single argument string representing the range.
 * [fizzbuzz41.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz41.c)
-  Control the output via the printf format string
+  Control the output via the printf format string.
 * [fizzbuzz42.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz42.c)
-  Use the result of an inner printf to control an outer printf; abuse of conditional operator
+  Use the result of an inner printf to control an outer printf; abuse of conditional operator.
 * [fizzbuzz43.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz43.c)
-  Print 15 lines at a time, modifying the format string for the final iteration
+  Print 15 lines at a time, modifying the format string for the final iteration.
 * [fizzbuzz44.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz44.c)
-  Ugly games with printf format string
+  Ugly games with printf format string.
 * [fizzbuzz45.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz45.c)
-  Even uglier games with printf format string
+  Even uglier games with printf format string.
 * [fizzbuzz46.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz46.c)
-  A terser version of fizzbuzz24.c
+  A terser version of fizzbuzz24.c.
 * [fizzbuzz47.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz47.c)
-  Build each line a character at a time
+  Build each line a character at a time.
 * [fizzbuzz48.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz48.c)
-  Build each line a character at a time using obfuscated arithmetic
+  Build each line a character at a time using obfuscated arithmetic.
 * [fizzbuzz49.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz49.c)
-  Print each line a character at a time
+  Print each line a character at a time.
 * [fizzbuzz50.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz50.c)
-  Like fizzbuzz36.c, but more obfuscated
+  Like fizzbuzz36.c, but more obfuscated.
 * [fizzbuzz51.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz51.c)
-  Like fizzbuzz50.c, but with a smaller lookup tabl
+  Like fizzbuzz50.c, but with a smaller lookup tabl.
 * [fizzbuzz52.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz52.c)
-  Math
+  Math.
 * [fizzbuzz53.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz53.c)
-  Based on fizzbuzz04.c; so obvious I should have done it sooner
+  Based on fizzbuzz04.c; so obvious I should have done it sooner.
 * [fizzbuzz54.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz54.c)
-  Just in case fizzbuzz53.c wasn't verbose enough
+  Just in case fizzbuzz53.c wasn't verbose enough.
 * [fizzbuzz55.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz55.c)
-  Finite state machine
+  Finite state machine.
 * [fizzbuzz56.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz56.c)
-  Finite state machine, done the old fashioned way
+  Finite state machine, done the old fashioned way.
 * [fizzbuzz57.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz57.c)
-  Finite state machine, now even more obfuscated
+  Finite state machine, now even more obfuscated.
 * [fizzbuzz58.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz58.c)
-  Linked list of format structures
+  Linked list of format structures.
 * [fizzbuzz59.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz59.c)
-  fizzbuzz58.c was too legible
+  fizzbuzz58.c was too legible.
 * [fizzbuzz60.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz60.c)
-  Like fizzbuzz59.c, but relative offsets avoid the need for a pointer to the first element
+  Like fizzbuzz59.c, but relative offsets avoid the need for a pointer to the first element.
 * [fizzbuzz61.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz61.c)
-  Scramble and unscramble
+  Scramble and unscramble.
 * [fizzbuzz62.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz62.c)
-  Relatively straightforward use of ?: operator
+  Relatively straightforward use of ?: operator.
 * [fizzbuzz63.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz63.c)
-  This one works only if identical string literals occupy the same storage (it fails with tcc)
+  This one works only if identical string literals occupy the same storage (it fails with tcc).
 * [fizzbuzz64.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz64.c)
-  Abuse of multi-character constants (works only if they have distinct values, which is not guaranteed) (it fails with tcc)
+  Abuse of multi-character constants (works only if they have distinct values, which is not guaranteed) (it fails with tcc).
 * [fizzbuzz65.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz65.c)
-  You can write BASIC in any language
+  You can write BASIC in any language.
 * [fizzbuzz66.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz66.c)
-  A few macros can make the code much clearer
+  A few macros can make the code much clearer.
 * [fizzbuzz67.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz67.c)
-  Compound literal
+  Compound literal.
 * [fizzbuzz68.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz68.c)
-  Threads
+  Threads.
 * [fizzbuzz69.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz69.c)
   Cheat.  Fails if `expected-output.txt` is not available.
 * [fizzbuzz70.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz70.c)
   Based on fizzbuzz20.c, using Duff's Device.  Use printf for all lines, and shuffle the case labels.
 * [fizzbuzz71.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz71.c)
-  Based on fizzbuzz66.c but with more macros
+  Based on fizzbuzz66.c but with more macros.
+* [fizzbuzz72.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz72.c)
+  More straightforward loop unrolling inspired by Duff's Device, with macros for brevity.
