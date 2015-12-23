@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 int main(void) {
-    char line[100][9] = { 0 };
+    char line[100][9];
     for (int i = 1; i <= 100; i ++ ) {
         sprintf(line[i-1], "%d", i);
     }
