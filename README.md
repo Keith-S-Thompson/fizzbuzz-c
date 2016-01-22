@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 73 different C implementations of
+This project contains, so far, 74 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -251,3 +251,5 @@ Please do not use these programs as examples of good programming style.
   More straightforward loop unrolling inspired by Duff's Device, with macros for brevity.
 * [fizzbuzz73.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz73.c)
   Based on fizzbuzz23.c, using a two-dimensional array of characters.
+* [fizzbuzz74.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz73.c)
+  Inspired by fizzbuzz54.c, but print a bit at a time (assumes an ASCII-based character set).
