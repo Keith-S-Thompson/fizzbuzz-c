@@ -24,8 +24,9 @@
 #define THEN ) {
 #define THREE 3
 #define ZERO 0
+#define STANDARD_INPUT_OUTPUT <stdio.h>
 
-#include <stdio.h>
+#include STANDARD_INPUT_OUTPUT
 
 PROGRAM FIZZBUZZ71 IS
 BEGIN
