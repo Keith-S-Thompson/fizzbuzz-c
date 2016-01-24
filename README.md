@@ -255,3 +255,5 @@ Please do not use these programs as examples of good programming style.
   Inspired by fizzbuzz54.c, but print a bit at a time (assumes an ASCII-based character set).
 * [fizzbuzz75.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz75.c)
   Like fizzbuzz74.c, but using 4 bits per character with a lookup table.
+* [fizzbuzz76.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz76.c)
+  Encode the data as a large integer, use GMP to extract it.

@@ -50,6 +50,8 @@ for file in $tests ; do
         $CC $CFLAGS -pthread $file -o $exe
     elif [ "$file" = "fizzbuzz64.c" ] ; then
         $CC $CFLAGS -Wno-multichar $file -o $exe
+    elif [ "$file" = "fizzbuzz76.c" ] ; then
+        $CC $CFLAGS $file -o $exe -lgmp
     else
         $CC $CFLAGS          $file -o $exe
     fi
