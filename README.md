@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 75 different C implementations of
+This project contains, so far, 78 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -257,3 +257,7 @@ Please do not use these programs as examples of good programming style.
   Like fizzbuzz74.c, but using 4 bits per character with a lookup table.
 * [fizzbuzz76.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz76.c)
   Encode the data as a large integer, use GMP to extract it.
+* [fizzbuzz77.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz77.c)
+  Don't divide, just count.
+* [fizzbuzz78.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz78.c)
+  Like fizzbuzz77.c, but just use one 16-bit variable.
