@@ -206,7 +206,7 @@ Please do not use these programs as examples of good programming style.
 * [fizzbuzz50.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz50.c)
   Like fizzbuzz36.c, but more obfuscated.
 * [fizzbuzz51.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz51.c)
-  Like fizzbuzz50.c, but with a smaller lookup tabl.
+  Like fizzbuzz50.c, but with a smaller lookup table.
 * [fizzbuzz52.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz52.c)
   Math.
 * [fizzbuzz53.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz53.c)
