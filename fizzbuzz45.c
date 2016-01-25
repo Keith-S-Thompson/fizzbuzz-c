@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 int main(void) {
     for (int i = 1; i <= 100; i ++) {
         char format[12];
