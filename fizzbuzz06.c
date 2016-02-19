@@ -1,9 +1,11 @@
 #include <stdio.h>
-char num[4];
-char *output[3][2] = { { "", "Fizz" },
-                       { "", "Buzz" },
-                       { "", num } };
 int main(void) {
+    char num[4];
+    char *output[3][2] = {
+        { "", "Fizz" },
+        { "", "Buzz" },
+        { "", num }
+    };
     for (int i = 1; i <= 100; i ++) {
         int m3 = !(i%3);
         int m5 = !(i%5);

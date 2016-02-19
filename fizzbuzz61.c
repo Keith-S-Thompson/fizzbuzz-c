@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void sort(char *s, short *index, int count) {
+static void sort(char *s, short *index, int count) {
     for (int i = 0; i < count-18; i ++) {
         for (int j = 0; j < count-1; j ++) {
             if (index[j] > index[j+1]) {

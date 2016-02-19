@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-void die(char *message) {
+static void die(char *message) {
     fprintf(stderr, "%s\n",  message);
     exit(EXIT_FAILURE);
 }
@@ -15,7 +15,7 @@ struct dstring {
     bool allocated;
 };
 
-void *thread_routine(void *arg) {
+static void *thread_routine(void *arg) {
     const int i = *(int*)arg;
     struct dstring *result = malloc(sizeof *result);
     if (result == NULL) {
@@ -41,7 +41,7 @@ void *thread_routine(void *arg) {
     return result;
 }
 
-struct dstring *line(int i) {
+static struct dstring *line(int i) {
     pthread_t thr;
     int result = pthread_create(&thr, NULL, thread_routine, &i);
     if (result != 0) {

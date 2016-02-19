@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void print_bit(int b) {
+static void print_bit(int b) {
     static unsigned char c = 0;
     static int pos = 7;
     c |= b << pos--;

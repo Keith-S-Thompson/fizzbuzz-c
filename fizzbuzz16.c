@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void fizzbuzz(int i) {
+static void fizzbuzz(int i) {
     if (i > 1) {
         fizzbuzz(i-1);
     }

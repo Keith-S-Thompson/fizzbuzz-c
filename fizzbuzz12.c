@@ -1,25 +1,25 @@
 #include <stdio.h>
 
-void fizz(int n) {
+static void fizz(int n) {
     fputs("Fizz", stdout);
 }
 
-void buzz(int n) {
+static void buzz(int n) {
     fputs("Buzz", stdout);
 }
 
-void print(int n) {
+static void print(int n) {
     printf("%d", n);
 }
 
-void nothing(int n) {
+static void nothing(int n) {
 }
 
-void (*first(int n))(int) {
+static void (*first(int n))(int) {
     return !(n%3) ? fizz : nothing;
 }
 
-void (*second(int n))(int) {
+static void (*second(int n))(int) {
     return !(n%5) ? buzz : n%3 ? print : nothing;
 }
 

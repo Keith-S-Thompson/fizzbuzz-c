@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-void fizz     (int n) { puts("Fizz"); }
-void buzz     (int n) { puts("Buzz"); }
-void fizzbuzz (int n) { puts("FizzBuzz"); }
-void print    (int n) { printf("%d\n", n); }
+static void fizz     (int n) { puts("Fizz"); }
+static void buzz     (int n) { puts("Buzz"); }
+static void fizzbuzz (int n) { puts("FizzBuzz"); }
+static void print    (int n) { printf("%d\n", n); }
 
 int main(void) {
     void (*funcs[15])(int) = { 0 };

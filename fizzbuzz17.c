@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void fizzbuzz(int lo, int hi) {
+static void fizzbuzz(int lo, int hi) {
     if (lo <= hi) {
         const int i = (lo + hi) / 2;
         if (lo < hi) fizzbuzz(lo, i-1);
