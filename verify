@@ -68,4 +68,5 @@ if $ok ; then
     echo OK
 else
     echo Failures: $failures
+    exit 1
 fi
