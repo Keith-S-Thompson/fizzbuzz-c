@@ -3,16 +3,23 @@
 strict=false
 tests=""
 clang=false
+standard=-std=c99
 
 for arg in "$@" ; do
     if [ "$arg" = "-strict" ] ; then
         strict=true
     elif [ "$arg" = "-clang" ] ; then
         clang=true
+    elif [ "$arg" = "-c90" ] ; then
+        standard=-std=c90
+    elif [ "$arg" = "-c99" ] ; then
+        standard=-std=c99
+    elif [ "$arg" = "-c11" ] ; then
+        standard=-std=c11
     elif [ -f "$arg" ] ; then
         tests="$tests $arg"
     else
-        echo "Usage: $0 [-strict] [-clang]" 1>&2
+        echo "Usage: $0 [-strict] [-clang] [-c90|-c99|-c11]" 1>&2
         exit 1
     fi
 done
@@ -24,10 +31,11 @@ else
 fi
 
 if $strict ; then
-    CFLAGS="-std=c99 -pedantic -Wall -Wextra -O3"
+    CFLAGS="$standard -pedantic -Wall -Wextra -O3"
 else
-    CFLAGS="-std=c99 -Wno-format-extra-args"
+    CFLAGS="$standard -Wno-format-extra-args"
 fi
+
 # if $clang && ! $strict ; then
 #     CFLAGS="$CFLAGS -Wno-logical-op-parentheses"
 # fi
