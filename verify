@@ -31,7 +31,7 @@ else
 fi
 
 if $strict ; then
-    CFLAGS="$standard -pedantic -Wall -Wextra -O3"
+    CFLAGS="$standard -pedantic-errors -Wall -Wextra -O3"
 else
     CFLAGS="$standard -Wno-format-extra-args"
 fi
