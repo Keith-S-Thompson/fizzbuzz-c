@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 80 different C implementations of
+This project contains, so far, 81 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -104,6 +104,8 @@ stdout is sent to a terminal.  Another works only on implementations
 that support [Pthreads](http://en.wikipedia.org/wiki/Pthreads).
 (The 2011 ISO C standard adds threads as an optional feature;
 I haven't yet written a version that takes advantage of that.)
+Yet another depends on undefined behavior and a certain amount
+of blind luck.
 
 Please do not use these programs as examples of good programming style.
 
@@ -265,3 +267,5 @@ Please do not use these programs as examples of good programming style.
   Brute force with printf.
 * [fizzbuzz80.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz80.c)
   Iterate over an array of lines.
+* [fizzbuzz81.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz81.c)
+  Search for the message in memory; depends on undefined behavior and luck.
