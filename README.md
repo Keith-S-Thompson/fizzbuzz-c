@@ -16,7 +16,7 @@ The requirements are simple:
 
 Here's a straightforward implementation in C, similar to one I
 wrote (on paper!) in a job interview of my own a few years ago.
-(The problem statement didn't explictly say what to print for numbers
+(The problem statement didn't explicitly say what to print for numbers
 that are multiples of both three and five, so I stated the assumption
 explicitly as part of my solution.)
 
@@ -41,8 +41,8 @@ explicitly as part of my solution.)
 
 Some notes on this solution:
 
-It requires a C compiler that accepts C99, or at least permits
-declarations in for loop headers.  If you don't have such a compiler
+It requires a C compiler that accepts C99 or C11, or at least permits
+declarations in `for` loop headers.  If you don't have such a compiler
 (`gcc -std=c99` works), you can change this:
 
         for (int i = 1; i <= 100; i ++) {
@@ -74,11 +74,11 @@ that inspired the problem, I'd have to change "Fizz" to "Bizz" in
 two different places; similarly if I wanted to check for multiples
 of 3 and 7 rather than 3 and 5.
 
-For a problem of this trivial size, *none of these problems are
-worth solving*.  The entire program is only 18 lines (at least given
-the way I place my curly braces), and nobody who knows C should have
-any difficulty understanding what it does or modifying it correctly
-in the unlikely event that maintenance is called for.
+For a problem of this trivial size, *none of these problems are worth
+solving*.  The entire program is only 18 lines (given the way I place
+my curly braces), and nobody who knows C should have any difficulty
+understanding what it does or modifying it correctly in the unlikely
+event that maintenance is called for.
 
 Still, it can be instructive to see how the program might be modified
 to avoid the duplication.
@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 81 different C implementations of
+This project contains, so far, 82 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -269,3 +269,5 @@ Please do not use these programs as examples of good programming style.
   Iterate over an array of lines.
 * [fizzbuzz81.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz81.c)
   Search for the message in memory; depends on undefined behavior and luck.
+* [fizzbuzz82.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz82.c)
+  Some arithmetic and bit twiddling.
