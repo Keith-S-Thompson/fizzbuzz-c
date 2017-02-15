@@ -271,3 +271,5 @@ Please do not use these programs as examples of good programming style.
   Search for the message in memory; depends on undefined behavior and luck.
 * [fizzbuzz82.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz82.c)
   Some arithmetic and bit twiddling.
+* [fizzbuzz83.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz83.c)
+  Based on fizzbuzz82.c with an array of function pointers and backwards indexing.
