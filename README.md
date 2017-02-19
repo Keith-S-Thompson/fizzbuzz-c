@@ -273,5 +273,7 @@ Please do not use these programs as examples of good programming style.
   Some arithmetic and bit twiddling.
 * [fizzbuzz83.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz83.c)
   Based on fizzbuzz82.c with an array of function pointers and backwards indexing.
-* [fizzbuzz84.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz83.c)
+* [fizzbuzz84.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz84.c)
   Based on fizzbuzz21.c, Duff's device with partial loop re-rolling of the unrolled loop.
+* [fizzbuzz85.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz85.c)
+  Simple yet convoluted logic.
