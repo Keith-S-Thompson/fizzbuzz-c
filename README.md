@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 89 different C implementations of
+This project contains, so far, 90 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -284,4 +284,6 @@ Please do not use these programs as examples of good programming style.
 * [fizzbuzz88.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz88.c)
   Compute the correct character for each position.
 * [fizzbuzz89.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz89.c)
-  LIke fizzbuzz88.c, but without the confusing nested loop.
+  Like fizzbuzz88.c, but without the confusing nested loop.
+* [fizzbuzz90.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz90.c)
+  Use an array of integers.
