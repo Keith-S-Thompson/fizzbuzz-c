@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 93 different C implementations of
+This project contains, so far, 94 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -293,3 +293,5 @@ Please do not use these programs as examples of good programming style.
   Do it all in the for loop.
 * [fizzbuzz93.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz93.c)
   Inspired by fizzbuzz-polyglot fizzbuzz.f66, emulating Fortran arithmetic IF.
+* [fizzbuzz94.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz94.c)
+  Replace all float control by setjmp/longjmp.
