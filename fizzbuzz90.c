@@ -10,9 +10,9 @@ int main(void) {
         91, 92, 3, 94, 5, 3, 97, 98, 3, 5
     };
     for (int i = 0; i < 100; i ++) {
-        lines[i] ==  3 && puts("Fizz") ||
-        lines[i] ==  5 && puts("Buzz") ||
-        lines[i] == 15 && puts("FizzBuzz") ||
+        lines[i] ==  3 && (puts("Fizz")||1ll) ||
+        lines[i] ==  5 && (puts("Buzz")||1ll) ||
+        lines[i] == 15 && (puts("FizzBuzz")||1ll) ||
         printf("%d\n", lines[i]);
     }
 }

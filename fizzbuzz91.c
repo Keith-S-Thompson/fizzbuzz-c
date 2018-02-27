@@ -9,9 +9,9 @@ int main(void) {
         "LMFOBFRSFBVFXYZ"
         "[\\F^BFabFB";
     for (int i = 0; i < sizeof lines; i ++) {
-        lines[i] == 'F' && puts("Fizz") ||
-        lines[i] == 'B' && puts("Buzz") ||
-        lines[i] == 'Z' && puts("FizzBuzz") ||
+        lines[i] == 'F' && (puts("Fizz")||1ll) ||
+        lines[i] == 'B' && (puts("Buzz")||1ll) ||
+        lines[i] == 'Z' && (puts("FizzBuzz")||1ll) ||
         printf("%d\n", lines[i]);
     }
 }
