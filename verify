@@ -41,7 +41,7 @@ fi
 # fi
 
 if [ ! "$tests" ] ; then
-    tests=fizzbuzz??.c
+    tests=fizzbuzz[0-9][0-9][0-9].c
 fi
 
 ok=true
@@ -50,15 +50,15 @@ for file in $tests ; do
     echo -n .
     exe=`basename $file .c`
     out=`basename $file .c`.out
-    if [ "$file" = "fizzbuzz07.c" ] ; then
+    if [ "$file" = "fizzbuzz007.c" ] ; then
         $CC $CFLAGS -Wno-logical-op-parentheses $file -o $exe
-    elif [ "$file" = "fizzbuzz26.c" ] ; then
+    elif [ "$file" = "fizzbuzz026.c" ] ; then
         $CC $CFLAGS -Wno-logical-op-parentheses $file -o $exe
-    elif [ "$file" = "fizzbuzz27.c" ] || [ "$file" = "fizzbuzz68.c" ] ; then
+    elif [ "$file" = "fizzbuzz027.c" ] || [ "$file" = "fizzbuzz068.c" ] ; then
         $CC $CFLAGS -pthread $file -o $exe
-    elif [ "$file" = "fizzbuzz64.c" ] ; then
+    elif [ "$file" = "fizzbuzz064.c" ] ; then
         $CC $CFLAGS -Wno-multichar $file -o $exe
-    elif [ "$file" = "fizzbuzz76.c" ] ; then
+    elif [ "$file" = "fizzbuzz076.c" ] ; then
         $CC $CFLAGS $file -o $exe -lgmp
     else
         $CC $CFLAGS          $file -o $exe
