@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 99 different C implementations of
+This project contains, so far, 100 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -294,7 +294,7 @@ Please do not use these programs as examples of good programming style.
 * [fizzbuzz093.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz093.c)
   Inspired by fizzbuzz-polyglot fizzbuzz.f66, emulating Fortran arithmetic IF.
 * [fizzbuzz094.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz094.c)
-  Replace all float control by setjmp/longjmp.
+  Replace all flow control by setjmp/longjmp.
 * [fizzbuzz095.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz095.c)
   Function pointers.
 * [fizzbuzz096.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz096.c)
@@ -305,3 +305,5 @@ Please do not use these programs as examples of good programming style.
   Like fizzbuzz097.c but with arrays.
 * [fizzbuzz099.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz099.c)
   Build the output in a 2D array by columns.
+* [fizzbuzz100.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz100.c)
+  Build the output in a 2D array, initialized in a more interesting order.
