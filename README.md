@@ -309,3 +309,5 @@ Please do not use these programs as examples of good programming style.
   Build the output in a 2D array, initialized in a more interesting order.
 * [fizzbuzz101.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz101.c)
   Use strcat -- or not.
+* [fizzbuzz102.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz102.c)
+  Use sprintf, then clean up.
