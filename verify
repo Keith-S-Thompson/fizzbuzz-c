@@ -3,6 +3,7 @@
 strict=false
 tests=""
 clang=false
+musl=false
 standard=-std=c99
 
 for arg in "$@" ; do
@@ -10,6 +11,8 @@ for arg in "$@" ; do
         strict=true
     elif [ "$arg" = "-clang" ] ; then
         clang=true
+    elif [ "$arg" = "-musl" ] ; then
+        musl=true
     elif [ "$arg" = "-c90" ] ; then
         standard=-std=c90
     elif [ "$arg" = "-c99" ] ; then
@@ -26,6 +29,8 @@ done
 
 if $clang ; then
     CC=clang
+elif $musl ; then
+    CC=musl-gcc
 else
     CC=gcc
 fi
