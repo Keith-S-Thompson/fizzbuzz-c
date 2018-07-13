@@ -4,6 +4,7 @@ strict=false
 tests=""
 clang=false
 musl=false
+tcc=false
 standard=-std=c99
 
 for arg in "$@" ; do
@@ -13,6 +14,8 @@ for arg in "$@" ; do
         clang=true
     elif [ "$arg" = "-musl" ] ; then
         musl=true
+    elif [ "$arg" = "-tcc" ] ; then
+        tcc=true
     elif [ "$arg" = "-c90" ] ; then
         standard=-std=c90
     elif [ "$arg" = "-c99" ] ; then
@@ -31,14 +34,18 @@ if $clang ; then
     CC=clang
 elif $musl ; then
     CC=musl-gcc
+elif $tcc ; then
+    CC=tcc
 else
     CC=gcc
 fi
 
-if $strict ; then
-    CFLAGS="$standard -pedantic-errors -Wall -Wextra -O3"
-else
-    CFLAGS="$standard -Wno-format-extra-args"
+if ! $tcc ; then
+    if $strict ; then
+        CFLAGS="$standard -pedantic-errors -Wall -Wextra -O3"
+    else
+        CFLAGS="$standard -Wno-format-extra-args"
+    fi
 fi
 
 # if $clang && ! $strict ; then
