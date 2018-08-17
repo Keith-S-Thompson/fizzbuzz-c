@@ -72,8 +72,29 @@ for file in $tests ; do
         $CC $CFLAGS -Wno-multichar $file -o $exe
     elif [ "$file" = "fizzbuzz076.c" ] ; then
         $CC $CFLAGS $file -o $exe -lgmp
+    elif [ "$file" = "fizzbuzz106.c" ] ; then
+        $CC $CFLAGS $file -o $exe < fizzbuzz001.c
+    elif [ "$file" = "fizzbuzz107.c" ] ; then
+        $CC $CFLAGS \
+            -DLINE02='int main(void) {' \
+            -DLINE03='    for (int i = 1; i <= 100; i ++) {' \
+            -DLINE04='        if (i % 15 == 0) {' \
+            -DLINE05='            puts("FizzBuzz");' \
+            -DLINE06='        }' \
+            -DLINE07='        else if (i % 3 == 0) {' \
+            -DLINE08='            puts("Fizz");' \
+            -DLINE09='        }' \
+            -DLINE10='        else if (i % 5 == 0) {' \
+            -DLINE11='            puts("Buzz");' \
+            -DLINE12='        }' \
+            -DLINE13='        else {' \
+            -DLINE14='            printf("%d\n", i);' \
+            -DLINE15='        }' \
+            -DLINE16='    }' \
+            -DLINE17='}' \
+            $file -o $exe
     else
-        $CC $CFLAGS          $file -o $exe
+        $CC $CFLAGS $file -o $exe
     fi
     ./$exe >$out
     if ! cmp -s $out expected-output.txt ; then
@@ -90,3 +111,4 @@ else
     echo Failures: $failures
     exit 1
 fi
+
