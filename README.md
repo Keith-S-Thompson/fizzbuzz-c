@@ -107,6 +107,9 @@ I haven't yet written a version that takes advantage of that.)
 Yet another depends on undefined behavior and a certain amount
 of blind luck.
 
+See [portability.md](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/portability.md)
+for a discussion of which programs are non-portable.
+
 Please do not use these programs as examples of good programming style.
 
 * [fizzbuzz001.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz001.c)
