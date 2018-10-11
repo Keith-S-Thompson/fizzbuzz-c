@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 111 different C implementations of
+This project contains, so far, 112 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -332,3 +332,5 @@ Please do not use these programs as examples of good programming style.
   Abuse of conditional and comma operators
 * [fizzbuzz111.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz111.c)
   Worse abuse of conditional and comma operators
+* [fizzbuzz112.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz112.c)
+  Based on fizzbuzz093.c, use 3-way IF for all control flow
