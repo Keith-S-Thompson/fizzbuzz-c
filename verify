@@ -67,7 +67,11 @@ for file in $tests ; do
     elif [ "$file" = "fizzbuzz026.c" ] ; then
         $CC $CFLAGS -Wno-logical-op-parentheses $file -o $exe
     elif [ "$file" = "fizzbuzz027.c" ] || [ "$file" = "fizzbuzz068.c" ] ; then
-        $CC $CFLAGS -pthread $file -o $exe
+        if [ "$CC" = "tcc" ] ; then
+            $CC $CFLAGS -lpthread $file -o $exe
+        else
+            $CC $CFLAGS -pthread $file -o $exe
+        fi
     elif [ "$file" = "fizzbuzz064.c" ] ; then
         $CC $CFLAGS -Wno-multichar $file -o $exe
     elif [ "$file" = "fizzbuzz076.c" ] ; then
