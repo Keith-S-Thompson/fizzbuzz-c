@@ -1,30 +1,18 @@
 #include <stdio.h>
 
-enum return_target { zero, one, two };
-
 static struct stack_frame {
     int lo;
     int hi;
-    enum return_target ret;
+    enum return_target { zero, one, two } ret;
 } stack[100];
 static int sp = -1;
 
-static void dump_stack(void) {
-    printf("Stack: sp=%d", sp);
-    for (int i = 0; i <= sp; i ++) {
-        printf(" { %d %d %d }", stack[i].lo, stack[i].hi, stack[i].ret);
-    }
-    putchar('\n');
-}
-
 #define CALL(target, lo_, hi_, ret_) \
     do { \
-        /* printf(">>> In CALL(lo_=%d, hi_=%d, ret_=%d)\n", lo_, hi_, ret_); */ \
         sp ++; \
         stack[sp].lo = lo_; \
-        stack[sp].hi = hi_; /* printf("    In CALL, hi_=%d, stack[%d].hi = %d\n", hi_, sp, stack[sp].hi); */ \
+        stack[sp].hi = hi_; \
         stack[sp].ret = ret_; \
-        /* dump_stack(); */ \
         goto target; \
     } while (0)
 
@@ -40,14 +28,10 @@ static void dump_stack(void) {
     } while (0)
 
 int main(void) {
-    // printf(">>> CALL(FIZZBUZZ, %d, %d, %d)\n", 1, 100, zero);
     CALL(FIZZBUZZ, 1, 100, zero);
-    ZERO:
-    return 0;
+    ZERO: return 0;
 
     FIZZBUZZ:
-    // printf(">>> FIZZBUZZ: sp=%d (%d, %d, %d)\n", sp, stack[sp].lo, stack[sp].hi, stack[sp].ret);
-    // dump_stack();
     if (stack[sp].lo == stack[sp].hi) {
         if (stack[sp].lo % 15 == 0) {
             puts("FizzBuzz");
