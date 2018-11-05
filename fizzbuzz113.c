@@ -4,7 +4,7 @@ static struct stack_frame {
     int lo;
     int hi;
     enum return_target { zero, one, two } ret;
-} stack[100];
+} stack[8];
 static int sp = -1;
 
 #define CALL(target, lo_, hi_, ret_) \
