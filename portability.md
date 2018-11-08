@@ -91,3 +91,6 @@ some non-portabilities that I've missed.
   This relies on the `verify` script to invoke the compiler so that
   the macros are predefined, and on the compiler to accept command-line
   arguments to predefine macros.
+
+* `fizzbuzz114.c`
+  This requires an ASCII-compatible character set.

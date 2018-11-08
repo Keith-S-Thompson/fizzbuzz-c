@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 113 different C implementations of
+This project contains, so far, 114 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -336,3 +336,5 @@ Please do not use these programs as examples of good programming style.
   Based on fizzbuzz093.c, use 3-way IF for all control flow
 * [fizzbuzz113.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz113.c)
   Recursion implemented with an explicit stack and gotos
+* [fizzbuzz114.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz114.c)
+  Hexadecimal (requires and ASCII-compatible character set)
