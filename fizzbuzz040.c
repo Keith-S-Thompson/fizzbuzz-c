@@ -3,8 +3,7 @@
 int main(int argc, char **argv) {
     switch (argc) {
         case 1: {
-            char arg1[] = "\x1\x64";
-            return main(argc+1, (char *[]){ argv[0], arg1 });
+            return main(argc+1, (char *[]){argv[0], (char[]){"\x1\x64"}});
         }
         case 2: {
             const char lo = argv[1][0];
