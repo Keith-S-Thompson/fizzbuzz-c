@@ -97,6 +97,8 @@ for file in $tests ; do
             -DLINE16='    }' \
             -DLINE17='}' \
             $file -o $exe
+    elif [ "$file" = "fizzbuzz119.c" ] ; then
+        $CC $CFLAGS $file -o $exe -lm
     else
         $CC $CFLAGS $file -o $exe
     fi
