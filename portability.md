@@ -50,7 +50,7 @@ some non-portabilities that I've missed.
   A multi-character constant such as `'10'` is of type `int` and
   has an implementation-defined value.  This program assumes that
   distinct multi-character constants such as `'10'` and `'11'` have
-  distinct values.  This is not guaranteed by the the language.
+  distinct values.  This is not guaranteed by the language.
 
 * `fizzbuzz068.c`
   Like `fizzbuzz027.c`, this relies on POSIX threads, and on the `verify`
