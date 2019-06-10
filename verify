@@ -58,8 +58,13 @@ fi
 
 ok=true
 failures=''
+count=0
 for file in $tests ; do
     echo -n .
+    count=`expr $count + 1`
+    if [ `expr $count % 50` -eq 0 ] ; then
+        echo ''
+    fi
     exe=`basename $file .c`
     out=`basename $file .c`.out
     if [ "$file" = "fizzbuzz007.c" ] ; then
@@ -109,7 +114,9 @@ for file in $tests ; do
     fi
     rm -f $exe $out
 done
-echo ''
+if [ `expr $count % 50` -ne 0 ] ; then
+    echo ''
+fi
 
 if $ok ; then
     echo OK
