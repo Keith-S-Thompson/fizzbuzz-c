@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 122 different C implementations of
+This project contains, so far, 124 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -354,3 +354,7 @@ Please do not use these programs as examples of good programming style.
   Like fizzbuzz120.c but with an array of function pointers
 * [fizzbuzz122.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz122.c)
   No semicolons
+* [fizzbuzz123.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz123.c)
+  Use __LINE__
+* [fizzbuzz124.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz124.c)
+  Set and use __LINE__
