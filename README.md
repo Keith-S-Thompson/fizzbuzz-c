@@ -92,7 +92,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 127 different C implementations of
+This project contains, so far, 128 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -364,3 +364,5 @@ Please do not use these programs as examples of good programming style.
   Like fizzbuzz094.c, but more obscure
 * [fizzbuzz127.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz127.c)
   Count down to zero
+* [fizzbuzz128.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz128.c)
+  A table-driven solution
