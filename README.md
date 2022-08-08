@@ -93,7 +93,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 128 different C implementations of
+This project contains, so far, 130 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -170,9 +170,9 @@ Please do not use these programs as examples of good programming style.
 * [fizzbuzz028.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz028.c)
   Another tricky way to determine what to print.
 * [fizzbuzz029.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz029.c)
-  Based on fizzbuzz029, but taking advantage of the fact that excess arguments to printf are ignored.
+  Based on fizzbuzz028, but taking advantage of the fact that excess arguments to printf are ignored.
 * [fizzbuzz030.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz030.c)
-  Based on fizzbuzz030, but more terse, using a compound literal.
+  Based on fizzbuzz029, but more terse, using a compound literal.
 * [fizzbuzz031.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz031.c)
   More abuse of operators.
 * [fizzbuzz032.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz032.c)
@@ -367,3 +367,7 @@ Please do not use these programs as examples of good programming style.
   Count down to zero
 * [fizzbuzz128.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz128.c)
   A table-driven solution
+* [fizzbuzz129.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz129.c)
+  No whitespace other than the single newline at the end
+* [fizzbuzz130.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz130.c)
+  AnotherVersionWithNoWhitespace
