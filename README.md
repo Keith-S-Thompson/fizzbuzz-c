@@ -7,6 +7,8 @@ References:
 * [Using FizzBuzz to Find Developers who Grok Coding](http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/) by Imran Ghory
 * [Why Can't Programmers.. Program?](http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html) by Jeff Atwood
 * [The Problem with the FizzBuzz Problem](https://www.gayle.com/blog/2015/5/31/the-problem-with-the-fizzbuzz-problem) by Gayle Laakmann McDowell
+* [FizzBuzz Still Works](https://www.globalnerdy.com/2012/11/15/fizzbuzz-still-works/) by Joey deVilla
+* [Further Into FizzBuzz!](https://www.globalnerdy.com/2012/11/16/further-into-fizzbuzz/) by Joey deVilla
 
 The requirements are simple:
 
@@ -93,7 +95,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 130 different C implementations of
+This project contains, so far, 132 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -371,3 +373,7 @@ Please do not use these programs as examples of good programming style.
   No whitespace other than the single newline at the end
 * [fizzbuzz130.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz130.c)
   AnotherVersionWithNoWhitespace
+* [fizzbuzz131.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz131.c)
+  Booleans
+* [fizzbuzz132.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz132.c)
+  Like fizzbuzz132.c, but with the logic reversed
