@@ -1,5 +1,6 @@
 #!/bin/sh
 
+git=false
 strict=false
 tests=""
 clang=false
@@ -8,7 +9,9 @@ tcc=false
 standard=-std=c99
 
 for arg in "$@" ; do
-    if [ "$arg" = "-strict" ] ; then
+    if [ "$arg" = "-git" ] ; then
+        git=true
+    elif [ "$arg" = "-strict" ] ; then
         strict=true
     elif [ "$arg" = "-clang" ] ; then
         clang=true
@@ -53,7 +56,11 @@ fi
 # fi
 
 if [ ! "$tests" ] ; then
-    tests=fizzbuzz[0-9][0-9][0-9].c
+    if $git ; then 
+        tests=$(git ls-files 'fizzbuzz[0-9][0-9][0-9].c')
+    else
+        tests=fizzbuzz[0-9][0-9][0-9].c
+    fi
 fi
 
 ok=true
