@@ -22,7 +22,7 @@ static void msleep(int milliseconds) {
 
 static int line(void* arg) {
     const struct s argument = *(struct s*)arg;
-    msleep(10 * argument.i);
+    msleep(30 * argument.i);
     argument.s ? puts(argument.s) : printf("%d\n", argument.i);
     return 0;
 }
