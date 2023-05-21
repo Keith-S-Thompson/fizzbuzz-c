@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <threads.h>
-#include <stdlib.h>
-#include <stdint.h>
 
 struct s {
     int i;
