@@ -33,28 +33,24 @@ int main(void) {
 
     for (int i = 15; i <= 100; i += 15) {
         arguments[i-1] = (struct s){.i = i, .s = "FizzBuzz"};
-        if (thrd_create(&threads[i-1], line, &arguments[i-1])) exit(41);
-        // printf(">>> Create thread %d FizzBuzz\n", i-1);
+        thrd_create(&threads[i-1], line, &arguments[i-1]);
     }
     for (int i = 3; i <= 100; i += 3) {
         if (i % 5) {
             arguments[i-1] = (struct s){.i = i, .s = "Fizz"};
-            if (thrd_create(&threads[i-1], line, &arguments[i-1])) exit(41);
-            // printf(">>> Create thread %d Fizz\n", i-1);
+            thrd_create(&threads[i-1], line, &arguments[i-1]);
         }
     }
     for (int i = 5; i <= 100; i += 5) {
         if (i % 3) {
             arguments[i-1] = (struct s){.i = i, .s = "Buzz"};
-            if (thrd_create(&threads[i-1], line, &arguments[i-1])) exit(41);
-            // printf(">>> Create thread %d Buzz\n", i-1);
+            thrd_create(&threads[i-1], line, &arguments[i-1]);
         }
     }
     for (int i = 1; i <= 100; i ++) {
         if (i % 3 && i % 5) {
             arguments[i-1] = (struct s){.i = i, .s = NULL};
-            if (thrd_create(&threads[i-1], line, &arguments[i-1])) exit(41);
-            // printf(">>> Create thread %d\n", i-1);
+            thrd_create(&threads[i-1], line, &arguments[i-1]);
         }
     }
 

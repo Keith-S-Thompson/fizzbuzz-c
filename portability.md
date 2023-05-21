@@ -94,3 +94,7 @@ some non-portabilities that I've missed.
 
 * `fizzbuzz114.c`
   This requires an ASCII-compatible character set.
+
+* `fizzbuzz133.c`
+  This requires a C11 or higher implementation that supports
+  `<threads.h>`, an optional feature.

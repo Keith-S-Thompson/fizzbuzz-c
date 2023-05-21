@@ -95,7 +95,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 132 different C implementations of
+This project contains, so far, 133 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -105,8 +105,7 @@ deliberate obfuscation.  One of them works only if the program's output
 is redirected to a seekable file; it dies with an error message if
 stdout is sent to a terminal.  Another works only on implementations
 that support [Pthreads](http://en.wikipedia.org/wiki/Pthreads).
-(The 2011 ISO C standard adds threads as an optional feature;
-I haven't yet written a version that takes advantage of that.)
+(The 2011 ISO C standard adds threads as an optional feature.)
 Yet another depends on undefined behavior and a certain amount
 of blind luck.
 
@@ -377,3 +376,5 @@ Please do not use these programs as examples of good programming style.
   Booleans
 * [fizzbuzz132.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz132.c)
   Like fizzbuzz132.c, but with the logic reversed
+* [fizzbuzz133.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz133.c)
+  C11 threads.  100 of them.
