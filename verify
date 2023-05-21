@@ -6,7 +6,7 @@ tests=""
 clang=false
 musl=false
 tcc=false
-standard=-std=c99
+standard=-std=c11
 
 for arg in "$@" ; do
     if [ "$arg" = "-git" ] ; then
@@ -28,7 +28,7 @@ for arg in "$@" ; do
     elif [ -f "$arg" ] ; then
         tests="$tests $arg"
     else
-        echo "Usage: $0 [-strict] [-clang] [-c90|-c99|-c11]" 1>&2
+        echo "Usage: $0 [-git] [-strict] [-clang] [-c90|-c99|-c11]" 1>&2
         exit 1
     fi
 done
