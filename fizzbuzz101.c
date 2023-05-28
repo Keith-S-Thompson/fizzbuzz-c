@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-static char *nostrcat(char *dest, const char *src){}
+static char *nostrcat(char *dest, const char *src){return dest;}
 
 int main(void) {
     for (int i = 1; i <= 100; i ++) {
