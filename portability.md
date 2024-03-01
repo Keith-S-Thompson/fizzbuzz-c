@@ -98,3 +98,7 @@ some non-portabilities that I've missed.
 * `fizzbuzz133.c`
   This requires a C11 or higher implementation that supports
   `<threads.h>`, an optional feature.
+
+* `fizzbuzz134.c`
+  This requires a preprocessor that supports the `__COUNTER__`
+  predefined macro, a GNU C extension.
