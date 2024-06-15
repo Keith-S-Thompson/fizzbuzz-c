@@ -4,6 +4,7 @@ git=false
 strict=false
 tests=""
 clang=false
+icx=false
 musl=false
 tcc=false
 standard=-std=c11
@@ -15,6 +16,8 @@ for arg in "$@" ; do
         strict=true
     elif [ "$arg" = "-clang" ] ; then
         clang=true
+    elif [ "$arg" = "-icx" ] ; then
+        icx=true
     elif [ "$arg" = "-musl" ] ; then
         musl=true
     elif [ "$arg" = "-tcc" ] ; then
@@ -25,16 +28,20 @@ for arg in "$@" ; do
         standard=-std=c99
     elif [ "$arg" = "-c11" ] ; then
         standard=-std=c11
+    elif [ "$arg" = "-c17" ] ; then
+        standard=-std=c17
     elif [ -f "$arg" ] ; then
         tests="$tests $arg"
     else
-        echo "Usage: $0 [-git] [-strict] [-clang] [-c90|-c99|-c11]" 1>&2
+        echo "Usage: $0 [-git] [-strict] [-clang] [-icx] [-c90|-c99|-c11|-c17]" 1>&2
         exit 1
     fi
 done
 
 if $clang ; then
     CC=clang
+elif $icx ; then
+    CC=icx
 elif $musl ; then
     CC=musl-gcc
 elif $tcc ; then
@@ -91,6 +98,13 @@ for file in $tests ; do
     elif [ "$file" = "fizzbuzz106.c" ] ; then
         $CC $CFLAGS $file -o $exe < fizzbuzz001.c
     elif [ "$file" = "fizzbuzz107.c" ] ; then
+        # icx (Intel's compiler) treats \ characters on its command
+        # line differently than other compilers.
+        if [ "$CC" = "icx" ] ; then
+            newline='\\n'
+        else
+            newline='\n'
+        fi
         $CC $CFLAGS \
             -DLINE02='int main(void) {' \
             -DLINE03='    for (int i = 1; i <= 100; i ++) {' \
@@ -104,7 +118,7 @@ for file in $tests ; do
             -DLINE11='            puts("Buzz");' \
             -DLINE12='        }' \
             -DLINE13='        else {' \
-            -DLINE14='            printf("%d\n", i);' \
+            -DLINE14='            printf("%d'"$newline"'", i);' \
             -DLINE15='        }' \
             -DLINE16='    }' \
             -DLINE17='}' \
