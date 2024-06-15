@@ -73,6 +73,9 @@ some non-portabilities that I've missed.
 * `fizzbuzz081.c`
   This is horribly non-portable.  It searches memory near the entry
   point for the `main()` function for contents of a string literal.
+  Futhermore, it converts the value of `main` (a function pointer)
+  to `char*`, which has undefined behavior (gcc incorrectly says that
+  it's forbidden by ISO C).
 
 * `fizzbuzz105.c`
   This sets up a 2-dimensional array of characters and *randomly*
