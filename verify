@@ -1,6 +1,5 @@
 #!/bin/sh
 
-git=false
 strict=false
 tests=""
 clang=false
@@ -10,9 +9,7 @@ tcc=false
 standard=-std=c11
 
 for arg in "$@" ; do
-    if [ "$arg" = "-git" ] ; then
-        git=true
-    elif [ "$arg" = "-strict" ] ; then
+    if [ "$arg" = "-strict" ] ; then
         strict=true
     elif [ "$arg" = "-clang" ] ; then
         clang=true
@@ -33,7 +30,7 @@ for arg in "$@" ; do
     elif [ -f "$arg" ] ; then
         tests="$tests $arg"
     else
-        echo "Usage: $0 [-git] [-strict] [-clang] [-icx] [-c90|-c99|-c11|-c17]" 1>&2
+        echo "Usage: $0 [-strict] [-clang] [-icx] [-c90|-c99|-c11|-c17]" 1>&2
         exit 1
     fi
 done
@@ -63,11 +60,7 @@ fi
 # fi
 
 if [ ! "$tests" ] ; then
-    if $git ; then 
-        tests=$(git ls-files 'fizzbuzz[0-9][0-9][0-9].c')
-    else
-        tests=fizzbuzz[0-9][0-9][0-9].c
-    fi
+    tests=$(cat list.txt)
 fi
 
 ok=true
