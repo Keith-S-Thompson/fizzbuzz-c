@@ -34,8 +34,7 @@ some non-portabilities that I've missed.
   This relies on the POSIX threads as specified in the `<pthread.h>`
   header.  This is obviously not portable to non-POSIX systems.
   It relies on the `verify` script to invoke the compiler properly.
-  (I have not yet written a test that uses C11 `<threads.h>`, which
-  is similar to POSIX threads.  That's an optional feature in C11.)
+  See also `fizzbuzz133.c`, which uses ISO C `<threads.h>`.
 
 * `fizzbuzz063.c`  
   This assumes that identical string literals are stored in the
@@ -96,7 +95,8 @@ some non-portabilities that I've missed.
   arguments to predefine macros.
 
 * `fizzbuzz114.c`  
-  This requires an ASCII-compatible character set.
+  This requires an ASCII-compatible character set.  In practice,
+  it's likely to work with anything other than EBCDIC.
 
 * `fizzbuzz133.c`  
   This requires a C11 or higher implementation that supports
