@@ -95,7 +95,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 139 different C implementations of
+This project contains, so far, 140 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -390,3 +390,5 @@ Please do not use these programs as examples of good programming style.
   Extract each line from a single buffer.
 * [fizzbuzz139.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz139.c)
   No #include directive, depending only on an external declaration of putchar().
+* [fizzbuzz140.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz140.c)
+  Gratuitious generality.
