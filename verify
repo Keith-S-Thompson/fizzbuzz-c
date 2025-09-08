@@ -68,12 +68,12 @@ failures=''
 count=0
 for file in $tests ; do
     echo -n .
-    count=`expr $count + 1`
-    if [ `expr $count % 50` -eq 0 ] ; then
+    count=$(expr $count + 1)
+    if [ $(expr $count % 50) -eq 0 ] ; then
         echo ''
     fi
-    exe=`basename $file .c`
-    out=`basename $file .c`.out
+    exe=$(basename $file .c)
+    out=$(basename $file .c).out
     if [ "$file" = "fizzbuzz007.c" ] ; then
         $CC $CFLAGS -Wno-logical-op-parentheses $file -o $exe
     elif [ "$file" = "fizzbuzz026.c" ] ; then
@@ -128,7 +128,7 @@ for file in $tests ; do
     fi
     rm -f $exe $out
 done
-if [ `expr $count % 50` -ne 0 ] ; then
+if [ $(expr $count % 50) -ne 0 ] ; then
     echo ''
 fi
 
