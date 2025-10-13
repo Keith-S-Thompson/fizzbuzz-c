@@ -33,23 +33,17 @@ int main(void) {
         arguments[i-1] = (struct s){.i = i, .s = "FizzBuzz"};
         thrd_create(&threads[i-1], line, &arguments[i-1]);
     }
-    for (int i = 3; i <= 100; i += 3) {
-        if (i % 5) {
-            arguments[i-1] = (struct s){.i = i, .s = "Fizz"};
-            thrd_create(&threads[i-1], line, &arguments[i-1]);
-        }
+    for (int i = 3; i <= 100; i += 3) if (i % 5) {
+        arguments[i-1] = (struct s){.i = i, .s = "Fizz"};
+        thrd_create(&threads[i-1], line, &arguments[i-1]);
     }
-    for (int i = 5; i <= 100; i += 5) {
-        if (i % 3) {
-            arguments[i-1] = (struct s){.i = i, .s = "Buzz"};
-            thrd_create(&threads[i-1], line, &arguments[i-1]);
-        }
+    for (int i = 5; i <= 100; i += 5) if (i % 3) {
+        arguments[i-1] = (struct s){.i = i, .s = "Buzz"};
+        thrd_create(&threads[i-1], line, &arguments[i-1]);
     }
-    for (int i = 1; i <= 100; i ++) {
-        if (i % 3 && i % 5) {
-            arguments[i-1] = (struct s){.i = i, .s = NULL};
-            thrd_create(&threads[i-1], line, &arguments[i-1]);
-        }
+    for (int i = 1; i <= 100; i ++) if (i % 3 && i % 5) {
+        arguments[i-1] = (struct s){.i = i, .s = NULL};
+        thrd_create(&threads[i-1], line, &arguments[i-1]);
     }
 
     for (int i = 99; i >= 0; i --) {
