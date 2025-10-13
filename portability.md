@@ -100,7 +100,8 @@ some non-portabilities that I've missed.
 
 * `fizzbuzz133.c`  
   This requires a C11 or higher implementation that supports
-  `<threads.h>`, an optional feature.
+  `<threads.h>`, an optional feature.  It also depends on some timing
+  assumptions (the 30-millisecond sleep might need to be tweaked).
 
 * `fizzbuzz134.c`  
   This requires a preprocessor that supports the `__COUNTER__`
