@@ -139,3 +139,6 @@ fizzbuzz138.c
 fizzbuzz139.c
 fizzbuzz140.c
 fizzbuzz141.c
+fizzbuzz142.c
+fizzbuzz143.c
+fizzbuzz144.c
