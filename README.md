@@ -404,3 +404,5 @@ Please do not use these programs as examples of good programming style.
   Misleading abuse of comma operators and other features.
 * [fizzbuzz146.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz146.c)
   Misleading switch statement.
+* [fizzbuzz147.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz147.c)
+  Abuse of atexit().
