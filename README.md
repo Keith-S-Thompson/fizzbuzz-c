@@ -95,7 +95,7 @@ then unconditionally print a new-line character).
 
 And there are a number of other ways to solve the problem.
 
-This project contains, so far, 146 different C implementations of
+This project contains, so far, 148 different C implementations of
 FizzBuzz, most of them deliberately silly, using various combinations
 of the `?:` conditional operator, short-circuit `&&` and `||`, function
 pointers, arrays of function pointers, arrays of arrays of function
@@ -406,3 +406,5 @@ Please do not use these programs as examples of good programming style.
   Misleading switch statement.
 * [fizzbuzz147.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz147.c)
   Abuse of atexit().
+* [fizzbuzz148.c](https://github.com/Keith-S-Thompson/fizzbuzz-c/blob/master/fizzbuzz148.c)
+  More Ugly games with printf format string (see also fizzbuzz044.c).
