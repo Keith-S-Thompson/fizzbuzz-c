@@ -10,7 +10,7 @@ struct s {
 #define BILLION 1000000000LL
 
 static void msleep(int milliseconds) {
-    long long nanoseconds = milliseconds * MILLION;
+    const long long nanoseconds = milliseconds * MILLION;
     const struct timespec how_long = {
         .tv_sec  = nanoseconds / BILLION,
         .tv_nsec = nanoseconds % BILLION
