@@ -109,3 +109,8 @@ some non-portabilities that I've missed.
 
 * `fizzbuzz141.c`  
   Like `fizzbuzz105.c`, this can fail if `rand()` misbehaves.
+
+* `fizzbuzz149.c`  
+  Stores characters at pseudo-random indices in an array, then
+  re-traverses the array for output.  Fails if `rand() % SIZE`
+  values collide.
