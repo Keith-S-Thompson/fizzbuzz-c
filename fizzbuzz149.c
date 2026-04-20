@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SIZE 60000
+#define SIZE 1000000
 static char output[SIZE];
 
 void store_char(char c) {
-    output[rand() % SIZE] = c;
+#if RAND_MAX <= 32767
+    const int r = (rand() << 16) | rand();
+#else
+    const int r = rand();
+#endif
+    output[r % SIZE] = c;
 }
 
 void store_string(const char *s) {
