@@ -5,6 +5,7 @@ tests=""
 clang=false
 icx=false
 musl=false
+diet=false
 tcc=false
 standard=-std=c11
 
@@ -17,6 +18,8 @@ for arg in "$@" ; do
         icx=true
     elif [ "$arg" = "-musl" ] ; then
         musl=true
+    elif [ "$arg" = "-diet" ] ; then
+        diet=true
     elif [ "$arg" = "-tcc" ] ; then
         tcc=true
     elif [ "$arg" = "-c90" ] ; then
@@ -41,6 +44,8 @@ elif $icx ; then
     CC=icx
 elif $musl ; then
     CC=musl-gcc
+elif $diet ; then
+    CC="diet gcc"
 elif $tcc ; then
     CC=tcc
 else
